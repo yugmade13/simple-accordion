@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #827397;
+    color: #363062;
+}
+
+h2 {
+    font-size: 2rem;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.accordion {
+    max-width: 1000px;
+    width: 100%;
+    margin: 2rem auto;
+    padding: 0 15px;
+}
+
+.accordion-item {
+    background-color: #E9D5DA;
+    margin: 2px 0;
+}
+
+.accordion-item:first-child {
+    border-radius: 6px 6px 0 0;
+}
+
+.accordion-item:last-child {
+    border-radius: 0 0 6px 6px;
+}
+
+.accordion-header {
+    min-height: 3rem;
+    padding: 15px;
+    line-height: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.accordion-header i {
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: transform .2s ease-in-out;
+}
+
+.accordion-header.active i {
+    transform: rotate(90deg);
+}
+
+.accordion-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: all .2s;
+}
+
+.accordion-body-content {
+    padding: 15px;
+    border-top: 1px solid;
+    border-image: linear-gradient(to right, transparent, #A267AC, transparent) 1;
+    background-color: #fef6f8;
+}
